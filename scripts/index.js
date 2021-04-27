@@ -2,8 +2,32 @@ const addToDoBtn = document.querySelector(`#addToDo`);
 const toDoContainer = document.querySelector(`#toDoContainer`);
 const inputField = document.querySelector(`#inputField`);
 /* const inputFieldVal = document.querySelector(`#inputField`).value; */
+const test = () => {
+  let par = document.createElement("li");
+  par.classList.add("parStyle");
+  par.innerText = inputField.value;
+  if (inputField.value != "") {
+    toDoContainer.appendChild(par);
+    inputField.value = "";
+    par.addEventListener(`click`, function () {
+      par.style.textDecoration = `line-through`;
+      par.style.color = `gray`;
+      let restoreBtn = document.createElement("button");
+      restoreBtn.classList.add("restoreBtn");
+      restoreBtn.innerText = "Restore";
+      toDoContainer.appendChild(restoreBtn);
+    });
+    par.addEventListener(`dblclick`, function () {
+      toDoContainer.removeChild(restoreBtn);
+    });
+  } else {
+    document.querySelector("#inputField").placeholder =
+      "Please Enter text first";
+  }
+};
+addToDoBtn.addEventListener(`click`, test);
 
-addToDoBtn.addEventListener(`click`, () => {
+/* addToDoBtn.addEventListener(`click`, () => {
   let par = document.createElement("li");
   par.classList.add("parStyle");
   par.innerText = inputField.value;
@@ -20,7 +44,19 @@ addToDoBtn.addEventListener(`click`, () => {
     document.querySelector("#inputField").placeholder =
       "Please Enter text first";
   }
-});
+}); */
+
+// Functional check which key the user is pressing
+const keyCheck = (event) => {
+  console.log(event);
+  if (event.key == "Enter") test();
+};
+// Adding event listener to the input
+const userInput = document.querySelector("#inputField");
+userInput.addEventListener("keypress", keyCheck);
+
+// // Adding event listener to the form
+// document.querySelector("form").addEventListener("submit", addToList);
 
 /* addToDoBtn.addEventListener(`click`, function () {
   let paragraph = document.createElement("li");
