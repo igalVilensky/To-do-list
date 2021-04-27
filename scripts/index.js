@@ -1,12 +1,13 @@
-let addToDoBtn = document.querySelector(`#addToDo`);
-let toDoContainer = document.querySelector(`#toDoContainer`);
-let inputField = document.querySelector(`#inputField`);
+const addToDoBtn = document.querySelector(`#addToDo`);
+const toDoContainer = document.querySelector(`#toDoContainer`);
+const inputField = document.querySelector(`#inputField`);
+/* const inputFieldVal = document.querySelector(`#inputField`).value; */
 
 addToDoBtn.addEventListener(`click`, () => {
-  if (inputField !== "") {
-    let par = document.createElement("li");
-    par.classList.add("parStyle");
-    par.innerText = inputField.value;
+  let par = document.createElement("li");
+  par.classList.add("parStyle");
+  par.innerText = inputField.value;
+  if (inputField.value != "") {
     toDoContainer.appendChild(par);
     inputField.value = "";
     par.addEventListener(`click`, function () {

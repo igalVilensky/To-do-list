@@ -373,6 +373,10 @@ body .main-container {
   vertical-align: middle;
 }
 
+#inputField ::placeholder {
+  color: #0b0c10;
+}
+
 #addToDo {
   height: 5rem;
   width: 5rem;
