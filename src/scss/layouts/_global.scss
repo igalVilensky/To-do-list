@@ -29,10 +29,11 @@ body {
   border: 1px solid rgb(31, 31, 31);
   outline: none;
   font-size: 2.5rem;
+
   vertical-align: middle;
 }
 
-#inputField ::placeholder {
+#inputField::placeholder {
   color: #0b0c10;
 }
 
@@ -52,10 +53,21 @@ body {
 
 .parStyle {
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding-left: 0.3rem;
   cursor: pointer;
   font-size: 4rem;
   color: #c5c6c8;
+}
+
+.restoreBtn {
+  cursor: pointer;
+  background-color: #6af4f2;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  bottom: 80px;
+  left: 25rem;
 }
 
 /* Hadi version */
