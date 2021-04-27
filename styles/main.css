@@ -390,8 +390,10 @@ body .main-container {
   margin: 0;
   margin-bottom: 3rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 4rem;
   color: #c5c6c8;
 }
+
+/* Hadi version */
 
 /*# sourceMappingURL=main.css.map */
