@@ -346,7 +346,7 @@ body {
 html h1,
 body h1 {
   font-size: 4rem;
-  color: #6af4f2;
+  color: #0004ff;
 }
 html .main-container,
 body .main-container {
@@ -357,6 +357,7 @@ body .main-container {
   align-items: center;
   background-color: #0b0c10;
   border-radius: 0.4rem;
+  width: 500px;
 }
 
 .container {
@@ -387,6 +388,7 @@ body .main-container {
 
 .allToDos {
   margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 
 /* NEW CLASS ADDED FROM JAVASCRIPT */
@@ -406,9 +408,23 @@ body .main-container {
   height: 40px;
   position: relative;
   bottom: 80px;
-  left: 25rem;
+  left: 26.7rem;
 }
 
-/* Hadi version */
+#toDoContainer.allToDos {
+  height: 50rem;
+  /*  background-color: red; */
+}
+
+/* Media */
+@media screen and (max-width: 768px) {
+  .main-container {
+    background-color: #0033ff;
+  }
+
+  h1 {
+    color: red;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
